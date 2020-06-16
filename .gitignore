@@ -24,3 +24,6 @@ hs_err_pid*
 */*/.idea
 */.idea
 bobola/playLA/__pycache__/
+geek_mongo/*.pdf
+.DS_Store
+*/.DS_Store
