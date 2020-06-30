@@ -3,7 +3,41 @@
 
 [[toc]]
 # chap01
-## 08 aggregate
+## 1-3 intro
+|Item | Comments
+| --- | ---
+| 什么是 MongoDB？ | 一个以 JSON 为数据模型的文档数据库。
+| 为什么叫文档数据库？ | 文档来自于“JSON Document”，并非我们一般理解的 PDF，WORD 文档。
+| 谁开发 MongDB？ | 上市公司 MongoDB Inc. ，总部位于美国纽约。
+| 主要用途 | 应用数据库，类似于 Oracle, MySQL 海量数据处理，数据平台。
+| 主要特点 | 建模为可选
+| JSON | 数据模型比较适合开发者 横向扩展可以支撑很大数据量和并发
+| MongoDB 是免费的吗？|  MongoDB 有两个发布版本：社区版和企业版。 社区版是基于 SSPL，一种和 AGPL 基本类似的开源协议 。 企业版是基于商业协议，需付费使用。
+
+
+> MongoDB vs RDBMS
+
+|     | MongoDB | RDBMS
+| --- | --- | ---
+| 数据模型 | 文档模型 | 关系模型
+| 数据库类型 | OLTP | OLTP
+| CRUD 操作 | MQL/SQL | SQL
+| 高可用 | 复制集 | 集群模式
+| 横向扩展能力 | 通过原生分片完善支持 | 数据分区或者应用侵入式
+| 索引支持 | B-树、全文索引、地理位置索引、多键(multikey)索引、TTL 索引 | B 树
+| 开发难度 | 容易  | 困难
+| 数据容量 | 没有理论上限 | 千万、亿
+| 扩展方式 | 垂直扩展+水平扩展 | 垂直扩展
+## 1-4 compass
+https://www.mongodb.com/try/download/compass
+
+● 官方提供的免费 GUI 管理工具
+● 数据管理（增删改查）
+● Schema 管理
+● 索引管理
+● 性能排查
+● 实时性能监控
+## 1-8 aggregate
 常见步骤
 
 | 步骤 | 作用 | SQL等价运算符
