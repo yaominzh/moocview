@@ -17,7 +17,7 @@
 
 > MongoDB vs RDBMS
 
-|     | MongoDB | RDBMS
+| item    | MongoDB | RDBMS
 | --- | --- | ---
 | 数据模型 | 文档模型 | 关系模型
 | 数据库类型 | OLTP | OLTP
