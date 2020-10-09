@@ -1,54 +1,136 @@
 [[toc]]
 
 知识点
-# 基础算法 —— 代码模板链接 常用代码模板1——基础算法
+# chap01基础算法 —— 代码模板链接 常用代码模板1——基础算法
 模板 
     背过   真题检验
+    理解背过: 思路理解，代码能默写出来
 提高熟练度：写完删掉写完删掉， 重复3-5遍
 
 ## 排序
 demo:用scanf
 java用bufferread
 > 快排: 难点在区分大小
+基于分治
 > 归并：难点在合二为一
  - 确定分界点 mid = (l + r) / 2
  - 递归排序 left , right
  - 归并 - 合二为一 **#** 
 
-## 习题
+# 习题
 快速排序
 AcWing 785. 快速排序2436人打卡
+muban 
+```cpp
+void quick_sort(int q[], int l, int r)
+{
+    if (l >= r) return;
+
+    int i = l - 1, j = r + 1, x = q[l + r >> 1];
+    while (i < j)
+    {
+        do i ++ ; while (q[i] < x);
+        do j -- ; while (q[j] > x);
+        if (i < j) swap(q[i], q[j]);
+    }
+    quick_sort(q, l, j), quick_sort(q, j + 1, r);
+}
+
+```
+code for AcWing 785. 快速排序2436人打卡
+
+```cpp
+#include <iostream>
+using namespace std;
+const int N = 1e6 + 10;
+int n ;
+int q[N];
+void quick_sort(int q[], int l, int r){
+    if(l>= r) return;
+    int x = q[l], i = l-1, j= r+1;
+    while(i<j){
+        do i++; while(q[i] <x);
+        do j--; while(q[j] >x);
+        if(i<j)swap(q[i], q[j]);
+    }
+    quick_sort(q,l,j);
+    quick_sort(q,j+1,r);
+    
+}
+int main(){
+    scanf("%d", &n);
+    for (int i = 0; i<n; i++) scanf("%d", &q[i]);
+    quick_sort(q, 0, n-1);
+    for(int i = 0; i<n; i++) printf("%d ", q[i]);
+    return 0;
+    
+}
+```
 AcWing 786. 第k个数2161人打卡
 归并排序
-AcWing 787. 归并排序2152人打卡
-AcWing 788. 逆序对的数量1877人打卡
-二分
-AcWing 789. 数的范围1993人打卡
+模板
+```cpp
+void merge_sort(int q[], int l, int r)
+{
+    if (l >= r) return;
+
+    int mid = l + r >> 1;
+    merge_sort(q, l, mid);
+    merge_sort(q, mid + 1, r);
+
+    int k = 0, i = l, j = mid + 1;
+    while (i <= mid && j <= r)
+        if (q[i] <= q[j]) tmp[k ++ ] = q[i ++ ];
+        else tmp[k ++ ] = q[j ++ ];
+
+    while (i <= mid) tmp[k ++ ] = q[i ++ ];
+    while (j <= r) tmp[k ++ ] = q[j ++ ];
+
+    for (i = l, j = 0; i <= r; i ++, j ++ ) q[i] = tmp[j];
+}
+
+```
+
+AcWing 787. 归并排序
+```cpp
+
+```
+AcWing 788. 逆序对的数量
+## 二分
+浮点二分：设置epsilon 或者 循环100次
+模板
+```cpp
+
+```
+AcWing 789. 数的范围
+```cpp
+```
 AcWing 790. 数的三次方根1869人打卡
-高精度
-AcWing 791. 高精度加法1724人打卡
-AcWing 792. 高精度减法1545人打卡
-AcWing 793. 高精度乘法1484人打卡
-AcWing 794. 高精度除法1413人打卡
-前缀和与差分
+## 高精度
+只有cpp需要，java python不需要
+一定要落实到代码上
+AcWing 791. 高精度加法
+AcWing 792. 高精度减法
+AcWing 793. 高精度乘法
+AcWing 794. 高精度除法
+## 前缀和与差分
+前缀和更多是公司，一定要从下标1开始
 AcWing 795. 前缀和1847人打卡
 AcWing 796. 子矩阵的和1706人打卡
 AcWing 797. 差分1665人打卡
 AcWing 798. 差分矩阵1486人打卡
-双指针算法
+## 双指针算法
+最核心的用途--复杂度从N^2 -> N
+通过动作某些单调的性质
 AcWing 799. 最长连续不重复子序列1685人打卡
 AcWing 800. 数组元素的目标和1552人打卡
-位运算
+## 位运算
 AcWing 801. 二进制中1的个数1654人打卡
-离散化
+## 离散化
 AcWing 802. 区间和1288人打卡
-区间合并
+## 区间合并
 AcWing 803. 区间合并1394人打卡
 
-作者：AcWing
-链接：https://www.acwing.com/activity/content/punch_the_clock/11/
-来源：AcWing
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 # chap 02 数据结构 —— 代码模板链接 常用代码模板2——数据结构
 ##链表与邻接表：树与图的存储
 ##栈与队列：单调队列、单调栈
