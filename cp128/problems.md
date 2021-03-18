@@ -77,8 +77,8 @@ number  | chapter  |  problem  |  judge
 072  | longest common subsequence  |  Longest Common Substring  |  [spoj:LCS]
 073  | longest increasing subsequence  |  Easy Longest Increasing Subsequence  |  [spoj:ELIS]
 074  | lowest common ancestor  |  Lowest Common Ancestor  |  [spoj:LCA]
-075  | manacher  |  Longest Palindromic Substring  |  [spoj:LPS]
-076  | manacher  |  Casting Spells  |  [kattis:castingspells]
+075 chap02-07 | manacher  |  Longest Palindromic Substring  |  [spoj:LPS](https://www.spoj.com/problems/LPS/)
+076 chap02-07 | manacher  |  Casting Spells  |  [kattis:castingspells](https://open.kattis.com/problems/castingspells)
 077  | matrix chain mult  |  Mixtures  |  [spoj:Mixtures]
 078  | matrix chain mult  |  The Safe Secret  |  [kattis:safesecret]
 079  | matrix chain mult  |  Sweet and Sour Rock  |  [spoj:ROCK]
@@ -94,7 +94,7 @@ number  | chapter  |  problem  |  judge
 089  | longest path in tree  |  Longest path in a tree  |  [spoj:PT07Z]
 090  | longest path in tree  |  SpeedCameras  |  [codility:calcium2015]
 091  | polygon  |  Toil for Oil  |  [spoj:OIL]
-092  | predictive text  |  T9  |  [poj:1451]
+092  | predictive text  |  T9  |  [poj:1451](http://poj.org/problem?id=1451)
 093  | dynamic programming  |  Fibonacci Sum  |  [spoj:FIBOSUM]
 094  | rabin karp  |  Longest Common Substring  |  [spoj:LCS]
 095  | range minimum query  |  Negative Score  |  [spoj:RPLN]
